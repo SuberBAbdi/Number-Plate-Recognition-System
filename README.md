@@ -1,17 +1,17 @@
 # Automated License Plate Recognition (ALPR) System
 
-A Graphic User Interface (GUI) application developed in MATLAB App Designer to process vehicle images, analyze image quality metrics, and isolate license plates using advanced mathematical morphology and spatial domain filtering.
+A Graphic User Interface (GUI) application developed in MATLAB App Designer to process vehicle images, analyze image quality metrics, and isolate license plates using advanced mathematical morphology and spatial domain filtering[cite: 1, 3].
 
-Developed for the course **Sensors and Signals (5ELEN021W.1)** at the **University of Westminster**
-* **Suber Abdi** (w2069210)
-* **Christian Dave Bergonia** (w1985516)
-* **Caleb Suleaudu** (w1910808)
-(citations are in the report)
+Developed for the course **Sensors and Signals (5ELEN021W.1)** at the **University of Westminster** by **Group 1**[cite: 3]:
+* **Suber Abdi** (w2069210)[cite: 3]
+* **Christian Dave Bergonia** (w1985516)[cite: 3]
+* **Caleb Suleaudu** (w1910808)[cite: 3]
+
 ---
 
 ## Overview
 
-The system provides an interactive multi-image workspace capable of executing end-to-end license plate extraction. It handles up to three vehicle images simultaneously, allowing side-by-side evaluation of raw inputs, converted grayscale representations, pixel intensity histograms, and final segmented binary masks. 
+The system provides an interactive multi-image workspace capable of executing end-to-end license plate extraction[cite: 1, 3]. It handles up to three vehicle images simultaneously, allowing side-by-side evaluation of raw inputs, converted grayscale representations, pixel intensity histograms, and final segmented binary masks[cite: 1, 3]. 
 
 The primary goal is to isolate rectangular license plate candidate regions from complex background environments while maintaining low computational requirements suitable for real-time edge processing[cite: 3].
 
@@ -19,7 +19,7 @@ The primary goal is to isolate rectangular license plate candidate regions from 
 
 ## Key Features
 
-* **Multi-Canvas GUI Workspace**: Interactive MATLAB App Designer UI featuring interactive axes (`UIAxes1` through `UIAxes9`) for tracking batch operations.
+* **Multi-Canvas GUI Workspace**: Interactive MATLAB App Designer UI featuring interactive axes (`UIAxes1` through `UIAxes9`) for tracking batch operations[cite: 1, 3].
 * **NTSC Weighted Grayscale Reduction**: Converts 24-bit RGB images into 8-bit luminance representations based on human visual sensitivity curves[cite: 3].
 * **RMS Contrast Evaluation**: Quantifies image contrast levels using Root Mean Square standard deviation metrics[cite: 3].
 * **Custom Intensity Histogram Analysis**: Computes pixel frequency across 256 intensity bins ($0$ to $255$) without relying on black-box utilities[cite: 1, 3].
@@ -28,7 +28,11 @@ The primary goal is to isolate rectangular license plate candidate regions from 
 ---
 
 ## Technical & Algorithm Pipeline
+
+```
 [Raw RGB Image] ──> [Grayscale Conversion] ──> [Median Noise Filter] ──> [Binary Thresholding] ──> [Morphological Opening/Closing] ──> [Isolated Plate Region]
+```
+
 ### 1. Grayscale Conversion
 Converts multi-channel RGB matrix values into single-channel luminance intensity $J$ using NTSC standard weighting coefficients[cite: 1, 3]:
 $$\text{Gray} = 0.299 \cdot R + 0.587 \cdot G + 0.114 \cdot B$$
@@ -67,11 +71,14 @@ To segment the license plate from background clutter, a custom $3 \times 15$ rec
 ---
 
 ## Repository Structure
-├── Final.m                                   # MATLAB App Designer GUI & logic codebase
-├── Number_Plate_Recognition_System_Report.pdf # Comprehensive academic project report
+
+```
+├── Final.m                                           # MATLAB App Designer GUI & logic codebase
+├── Number_Plate_Recognition_System_Report.pdf        # Comprehensive academic project report
 ├── Number_Plate_Recognition_System_Presentation.pptx # Project presentation deck
-├── LICENSE                                   # MIT License file
-└── README.md                                 # Project documentation
+├── LICENSE                                           # MIT License file
+└── README.md                                         # Project documentation
+```
 
 ---
 
@@ -84,33 +91,34 @@ To segment the license plate from background clutter, a custom $3 \times 15$ rec
 ### Execution Steps
 1. Clone this repository to your local directory:
    ```bash
-   git clone [https://github.com/SuberBAbdi/Number-Plate-Recognition-System/tree/main](https://github.com/SuberBAbdi/Number-Plate-Recognition-System/tree/main)
-Open MATLAB and navigate to the project directory.
-
-Launch the application from the Command Window:
-app = Final;
-
-User Interface Guide
-Load Image: Click Load Image 1, Load Image 2, or Load Image 3 to import vehicle images into the left axes column[cite: 1, 3].
-
-Convert to Grayscale: Click Grayscale Image to process the loaded input into single-channel luminance format and print the calculated RMS contrast to the console[cite: 1, 3].
-
-Generate Histogram: Click Histogram of Image to populate the 256-bin brightness distribution on the right axes column[cite: 1, 3].
-
-Isolate License Plate: Click Processed Version of Image to execute median filtering, binarization, and morphological opening/closing in a dedicated output window[cite: 3].
-
-Reset Canvas: Click the red RESET button to wipe all axes and restore the UI to its initial state[cite: 1, 3].
+   git clone [https://github.com/SuberBAbdi/Number-Plate-Recognition-System.git](https://github.com/SuberBAbdi/Number-Plate-Recognition-System.git)
+   ```
+2. Open MATLAB and navigate to the project directory.
+3. Launch the application from the Command Window:
+   ```matlab
+   app = Final;
+   ```
 
 ---
 
-Broader Impact & Considerations
-Ethical Considerations: Automated license plate recognition technologies must adhere to data privacy standards to avoid unauthorized surveillance, requiring clear retention limits and strict access controls[cite: 3].
+## User Interface Guide
 
-Social Impact: Enhances traffic management efficiency, automated toll collection, parking operations, and public security when deployed responsibly within legal frameworks[cite: 3].
-
-Environmental Impact: Algorithmic optimization and lightweight morphological techniques minimize computational demand, reducing energy consumption compared to heavy deep learning pipelines[cite: 3].
+1. **Load Image**: Click `Load Image 1`, `Load Image 2`, or `Load Image 3` to import vehicle images into the left axes column[cite: 1, 3].
+2. **Convert to Grayscale**: Click `Grayscale Image` to process the loaded input into single-channel luminance format and print the calculated RMS contrast to the console[cite: 1, 3].
+3. **Generate Histogram**: Click `Histogram of Image` to populate the 256-bin brightness distribution on the right axes column[cite: 1, 3].
+4. **Isolate License Plate**: Click `Processed Version of Image` to execute median filtering, binarization, and morphological opening/closing in a dedicated output window[cite: 3].
+5. **Reset Canvas**: Click the red **RESET** button to wipe all axes and restore the UI to its initial state[cite: 1, 3].
 
 ---
 
-License
-This project is licensed under the MIT License — see the LICENSE file for details.
+## Broader Impact & Considerations
+
+* **Ethical Considerations**: Automated license plate recognition technologies must adhere to data privacy standards to avoid unauthorized surveillance, requiring clear retention limits and strict access controls[cite: 3].
+* **Social Impact**: Enhances traffic management efficiency, automated toll collection, parking operations, and public security when deployed responsibly within legal frameworks[cite: 3].
+* **Environmental Impact**: Algorithmic optimization and lightweight morphological techniques minimize computational demand, reducing energy consumption compared to heavy deep learning pipelines[cite: 3].
+
+---
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
