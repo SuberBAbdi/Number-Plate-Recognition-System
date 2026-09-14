@@ -125,4 +125,4 @@ To segment the license plate from background clutter, a custom $3 \times 15$ rec
 
 ## License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
