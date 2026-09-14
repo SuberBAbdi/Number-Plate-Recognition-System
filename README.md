@@ -1,4 +1,4 @@
-# Automated License Plate Recognition (ALPR) System
+# Number Plate Recognition System
 
 A Graphic User Interface (GUI) application developed in MATLAB App Designer to process vehicle images, analyze image quality metrics, and isolate license plates using advanced mathematical morphology and spatial domain filtering.
 
