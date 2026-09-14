@@ -2,7 +2,7 @@
 
 A Graphic User Interface (GUI) application developed in MATLAB App Designer to process vehicle images, analyze image quality metrics, and isolate license plates using advanced mathematical morphology and spatial domain filtering.
 
-Developed for the course **Sensors and Signals (5ELEN021W.1)** at the **University of Westminster** by **Group 1**:
+Developed for the course **Sensors and Signals (5ELEN021W.1)** at the **University of Westminster**
 * **Suber Abdi** (w2069210)
 * **Christian Dave Bergonia** (w1985516)
 * **Caleb Suleaudu** (w1910808)
