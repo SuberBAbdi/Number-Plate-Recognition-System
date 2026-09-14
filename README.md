@@ -73,11 +73,15 @@ To segment the license plate from background clutter, a custom $3 \times 15$ rec
 ## Repository Structure
 
 ```
-├── Final.m                                           # MATLAB App Designer GUI & logic codebase
-├── Number_Plate_Recognition_System_Report.pdf        # Comprehensive academic project report
-├── Number_Plate_Recognition_System_Presentation.pptx # Project presentation deck
-├── LICENSE                                           # MIT License file
-└── README.md                                         # Project documentation
+├── Examples of Results/
+│   ├── GUI of Program.jpg                         # Interface screenshot
+│   └── Processed Image Results.jpg                # Output image sample visualization
+├── University Submitted Documents/
+│   ├── Number_Plate_Recognition_System_Presentation.pptx  # Project presentation deck
+│   └── Number_Plate_Recognition_System_Report.pdf         # Comprehensive academic project report
+├── LICENSE                                        # MIT License file
+├── Number_Plate_Recognition_System_Code.m         # MATLAB App Designer GUI & logic codebase
+└── README.md                                      # Project documentation
 ```
 
 ---
